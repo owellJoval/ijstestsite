@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Information Sheet</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./logo.png" alt="Company Logo" class="logo">
+        <h1 class="form-title">Client Information</h1>
+        <form>
+            <table class="info-table">
+                <tr>
+                    <td>Client Name:</td>
+                    <td><input type="text" name="client_name"></td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><input type="date" name="date"></td>
+                </tr>
+                <tr>
+                    <td>ID Number</td>
+                    <td><input type="text" name="identification"></td>
+                </tr>
+                <tr>
+                    <td>Date of Retirement:</td>
+                    <td><input type="date" name="retirement_date"></td>
+                </tr>
+                <tr>
+                    <td>Monthly Income Requirements:</td>
+                    <td><input type="text" name="monthly_income"></td>
+                </tr>
+                <tr>
+                    <td>If married, by what agreement:</td>
+                    <td>
+                        <label><input type="radio" name="marriage_agreement" value="COP"> COP</label>
+                        <label><input type="radio" name="marriage_agreement" value="ANC"> ANC</label>
+                        <label><input type="radio" name="marriage_agreement" value="ANC_acc"> ANC with Accrual</label>
+                        <label><input type="radio" name="marriage_agreement" value="not_married"> Not Married</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dependence:</td>
+                    <td><input type="text" name="dependence"></td>
+                </tr>
+                <tr>
+                    <td>Ages:</td>
+                    <td><input type="text" name="ages"></td>
+                </tr>
+                <tr>
+                    <td>Purpose:</td>
+                    <td>
+                        <label><input type="radio" name="purpose" value="first_meeting"> First Meeting</label>
+                        <label><input type="radio" name="purpose" value="follow_up"> Follow Up</label>
+                        <label><input type="radio" name="purpose" value="review"> Review</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Risk Profile:</td>
+                    <td>
+                        <button type="button" id="start-button">Start questionnaires</button>
+                        <div id="risk-profile-result" style="display: none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Investment Goal:</td>
+                    <td>
+                        <label><input type="radio" name="investment_goal" value="retirement"> Retirement</label>
+                        <label><input type="radio" name="investment_goal" value="investment_planning"> Investment Planning</label>
+                        <label><input type="radio" name="investment_goal" value="money_market"> Money Market</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Time Horizon:</td>
+                    <td>
+                        <label><input type="radio" name="time_horizon" value="short_term"> Short-Term (0-12 Months)</label>
+                        <label><input type="radio" name="time_horizon" value="medium_term"> Medium-Term (1-3 Years)</label>
+                        <label><input type="radio" name="time_horizon" value="long_term"> Long-Term (7+ Years)</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Investment Amount:</td>
+                    <td><input type="text" name="investment_amount"></td>
+                </tr>
+                <tr>
+                    <td>Monthly Withdrawals:</td>
+                    <td>
+                        <label><input type="radio" name="monthly_withdrawals" value="yes"> Yes</label>
+                        <label><input type="radio" name="monthly_withdrawals" value="no"> No</label>
+                        <input type="text" name="monthly_withdrawals_amount">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Registered for Tax:</td>
+                    <td>
+                        <label><input type="radio" name="registered_for_tax" value="yes"> Yes</label>
+                        <label><input type="radio" name="registered_for_tax" value="no"> No</label>
+                        <input type="text" name="tax_location">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Will & Testament:</td>
+                    <td>
+                        <label><input type="radio" name="last_will" value="yes"> Yes</label>
+                        <label><input type="radio" name="last_will" value="no"> No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Monthly Income:</td>
+                    <td>
+                        <label><input type="radio" name="monthly_income" value="yes"> Yes</label>
+                        <label><input type="radio" name="monthly_income" value="no"> No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Life Cover:</td>
+                    <td>
+                        <label><input type="radio" name="life_cover" value="yes"> Yes</label>
+                        <label><input type="radio" name="life_cover" value="no"> No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Retirement/Pension Savings:</td>
+                    <td>
+                        <label><input type="radio" name="retirement_savings" value="yes"> Yes</label>
+                        <label><input type="radio" name="retirement_savings" value="no"> No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current Asset Allocation:</td>
+                    <td><input type="text" name="asset_allocation"></td>
+                </tr>
+                <tr>
+                    <td>Fixed Deposit:</td>
+                    <td><input type="text" name="fixed_deposit"></td>
+                </tr>
+                <tr>
+                    <td>Offshore:</td>
+                    <td><input type="text" name="offshore"></td>
+                </tr>
+                <tr>
+                    <td>Treasury Bills:</td>
+                    <td><input type="text" name="treasury_bills"></td>
+                </tr>
+                <tr>
+                    <td>Residential Property:</td>
+                    <td><input type="text" name="residential_property"></td>
+                </tr>
+                <tr>
+                    <td>Bonds:</td>
+                    <td><input type="text" name="bonds"></td>
+                </tr>
+                <tr>
+                    <td>Investment Property:</td>
+                    <td><input type="text" name="investment_property"></td>
+                </tr>
+                <tr>
+                    <td>Money Market:</td>
+                    <td><input type="text" name="money_market"></td>
+                </tr>
+                <tr>
+                    <td>Business Investment:</td>
+                    <td><input type="text" name="business_investment"></td>
+                </tr>
+                <tr>
+                    <td>Other/Unit Trust:</td>
+                    <td><input type="text" name="other_unit_trust"></td>
+                </tr>
+                <tr>
+                    <td>Rental Income:</td>
+                    <td><input type="text" name="rental_income"></td>
+                </tr>
+                <tr>
+                    <td>Direct Shares:</td>
+                    <td><input type="text" name="direct_shares"></td>
+                </tr>
+                <tr>
+                    <td>Other:</td>
+                    <td><input type="text" name="other"></td>
+                </tr>
+                <tr>
+                    <td>Contractual Products:</td>
+                    <td><input type="text" name="contractual_products"></td>
+                </tr>
+                <tr>
+                    <td>Commnents:</td>
+                    <td><textarea name="notes"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Review Date:</td>
+                    <td><input type="date" name="review_date"></td>
+                </tr>
+            </table>
+            <div class="form-footer">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!--risk profile form-->
+    <div id="risk-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Risk Profile Assessment</h2>
+            <form id="risk-profile-form">
+                <div class="question">
+                    <label2>1. I plan to begin taking money from my investments in:</label>
+                    <label><input type="radio" name="question1" value="1"> Less than 1 year</label>
+                    <label><input type="radio" name="question1" value="2"> 1 to 2 years</label>
+                    <label><input type="radio" name="question1" value="3"> 3 to 5 years</label>
+                    <label><input type="radio" name="question1" value="4"> 6 to 10 years</label>
+                    <label><input type="radio" name="question1" value="5"> 11 to 15 years</label>
+                    <label><input type="radio" name="question1" value="6"> More than 15 years</label>
+                </div>
+                <div class="question">
+                    <label2>2. As I withdraw money from these investments, I plan to spend it over:</label>
+                    <label><input type="radio" name="question2" value="1"> 2 years or less</label>
+                    <label><input type="radio" name="question2" value="2"> 3 to 5 years</label>
+                    <label><input type="radio" name="question2" value="3"> 6 to 10 years</label>
+                    <label><input type="radio" name="question2" value="4"> 11 to 15 years</label>
+                    <label><input type="radio" name="question2" value="5"> More than 15 years</label>
+                </div>
+                <div class="question">
+                    <label2>3. When making a long-term investment, I plan to keep my money invested for:</label>
+                    <label><input type="radio" name="question3" value="1"> A. 1 to 2 years</label>
+                    <label><input type="radio" name="question3" value="2"> B. 3 to 4 years</label>
+                    <label><input type="radio" name="question3" value="3"> C. 5 to 6 years</label>
+                    <label><input type="radio" name="question3" value="4"> D. 7 to 8 years</label>
+                    <label><input type="radio" name="question3" value="5"> E. More than 8 years</label>
+                </div>
+                <div class="question">
+                    <label2>4. During the Global Financial Crisis, certain stocks dropped about 30% in value. If I
+                        owned such a stock that lost 30% over a few months, I would:</label>
+                    <label><input type="radio" name="question4" value="1"> A. Sell all of the remaining investment</label>
+                    <label><input type="radio" name="question4" value="2"> B. Sell some of the remaining investment</label>
+                    <label><input type="radio" name="question4" value="3"> C. Hold on to the investment and sell nothing</label>
+                    <label><input type="radio" name="question4" value="4"> D. Buy more of that investment</label>
+                    
+                </div>
+                <div class="question">
+                    <label2>5. Generally, I prefer investments with little or no ups or downs in value, and I am willing to accept the lower returns associated with such investments:</label>
+                    <label><input type="radio" name="question5" value="1"> I strongly disagree</label>
+                    <label><input type="radio" name="question5" value="2"> I disagree</label>
+                    <label><input type="radio" name="question5" value="3"> I somewhat agree</label>
+                    <label><input type="radio" name="question5" value="4"> I agree</label>
+                    <label><input type="radio" name="question5" value="5"> I strongly agree</label>
+                </div>
+                <div class="question">
+                    <label2>6. When the market performs poorly, I tend to sell some of my riskier investments and put money in safer investments:</label>
+                    <label><input type="radio" name="question6" value="1"> I strongly disagree</label>
+                    <label><input type="radio" name="question6" value="2"> I disagree</label>
+                    <label><input type="radio" name="question6" value="3"> I somewhat agree</label>
+                    <label><input type="radio" name="question6" value="4"> I agree</label>
+                    <label><input type="radio" name="question6" value="5"> I strongly agree</label>
+                </div>
+                <div class="question">
+                    <label2>7. Based only on a brief conversation with a friend, coworker, or relative, I would invest in a unit trust:</label>
+                    <label><input type="radio" name="question7" value="1"> I strongly disagree</label>
+                    <label><input type="radio" name="question7" value="2"> I disagree</label>
+                    <label><input type="radio" name="question7" value="3"> I somewhat agree</label>
+                    <label><input type="radio" name="question7" value="4"> I agree</label>
+                    <label><input type="radio" name="question7" value="5"> I strongly agree</label>
+                </div>
+                <div class="question">
+                    <label2>8. Suppose that during the Global Financial Crisis, Bonds lost nearly 3%. If I owned such a bond investment that lost almost 3% in a couple of months, I would:</label>
+                    <label><input type="radio" name="question8" value="1"> Sell all of the remaining investment</label>
+                    <label><input type="radio" name="question8" value="2"> Sell some of the remaining investment</label>
+                    <label><input type="radio" name="question8" value="3"> Hold on to the investment and sell nothing</label>
+                    <label><input type="radio" name="question8" value="4"> Buy more of that investment</label>
+                </div>
+                <div class="question">
+                    <label2>9. Suppose you have to invest N$100,000 in one of the following hypothetical investments over a one-year horizon. Given the potential gain or loss, I would invest in:</label>
+                    <label><input type="radio" name="question9" value="1"> Investment A - gain N$6,000, loss N$2,000</label>
+                    <label><input type="radio" name="question9" value="2"> Investment B - gain N$20,000, loss N$10,000</label>
+                    <label><input type="radio" name="question9" value="3"> Investment C - gain N$60,000, loss N$40,000</label>
+                </div>
+                <div class="question">
+                    <label2>10. My current and future income sources are:</label>
+                    <label><input type="radio" name="question10" value="1"> Very unstable</label>
+                    <label><input type="radio" name="question10" value="2"> Unstable</label>
+                    <label><input type="radio" name="question10" value="3"> Somewhat stable</label>
+                    <label><input type="radio" name="question10" value="4"> Stable</label>
+                    <label><input type="radio" name="question10" value="5"> Very stable</label>
+                </div>
+                <div class="question">
+                    <label2>11. When it comes to investing in stock or bond unit trusts (or individual stocks or bonds), I would describe myself as:</label>
+                    <label><input type="radio" name="question11" value="1"> Very inexperienced</label>
+                    <label><input type="radio" name="question11" value="2"> Somewhat inexperienced</label>
+                    <label><input type="radio" name="question11" value="3"> Somewhat experienced</label>
+                    <label><input type="radio" name="question11" value="4"> Experienced</label>
+                    <label><input type="radio" name="question11" value="5"> Very experienced</label>
+                </div>
+                <div class="question">
+                    <label2>12. If I were to pick allocating my portfolio between local markets (Namibia, South Africa) and offshore markets, I would allocate:</label>
+                    <label><input type="radio" name="question12" value="1"> 0-30% to offshore markets</label>
+                    <label><input type="radio" name="question12" value="2"> 31-60% to offshore markets</label>
+                    <label><input type="radio" name="question12" value="3"> Over 60% to offshore markets</label>
+                </div>
+                
+                <!-- Add other questions similarly -->
+                <div class="form-footer">
+                    <button type="button" id="submit-risk-profile">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
